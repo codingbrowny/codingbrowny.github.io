@@ -8,5 +8,9 @@ html, body {
 
 /* Hero */
 .hero-wrapper {
-  background: url("/images/hero-bg-4.jpg") no-repeat center scroll;
+  background-image: url("/images/hero-bg-4.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: center center;
 }
