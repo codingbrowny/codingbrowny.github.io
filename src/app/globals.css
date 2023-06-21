@@ -5,3 +5,8 @@
 html, body {
   font-family: 'Poppins', sans-serif;
 }
+
+/* Hero */
+.hero-wrapper {
+  background: url("/images/hero-bg-4.jpg") no-repeat center scroll;
+}
