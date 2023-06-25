@@ -1,2 +1,7 @@
 export {default as Hero} from "./hero"
 export { default as Navbar } from "./navbar"
+export { default as ServiceCard } from "./service-card"
+export { default as ProjectCard } from "./project-card"
+export { default as ContactForm } from "./contact"
+export { default as Footer } from "./footer"
+export { default as AboutSection } from "./about-section"
