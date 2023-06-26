@@ -10,14 +10,14 @@ const Hero = () => {
   return (
     <header className="hero-wrappe w-full h-screen overflow-hidden flex flex-col">
       <Navbar />
-      <section className="container flex flex-col md:flex-row justify-start items-center gap-16 lg:gap-20 my-auto">
-        <div className="md:basis-3/5 lg:basis-2/5 flex items-center gap-8 md:gap-10 lg:gap-14">
+      <section className="container flex flex-col md:flex-row justify-start items-center gap-10 md:gap-20 my-auto">
+        <div className="md:basis-2/3 flex items-center gap-8 md:gap-10 lg:gap-14 order-2 md:order-1">
           <Socials />
           <div>
             <h1 className="text-primary-title font-bold text-3xl mb-1">
               Hi, I am Browny
             </h1>
-            <h3 className="text-primary-lightText mb-3">Frontend Developer</h3>
+            <h3 className="text-primary-text mb-3">Frontend Developer</h3>
             <p className="text-primary-text mb-5">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
               molestiae aut sint, excepturi possimus magnam.
@@ -26,12 +26,11 @@ const Hero = () => {
               type="button"
               className="p-3 bg-primary text-primary-body rounded flex items-center gap-2"
             >
-              Contact Me{" "}
-                <VscSend className="text-xl" />
+              Contact Me <VscSend className="text-xl" />
             </button>
           </div>
         </div>
-        <div className="blob-wrapper self-center justify-self-center">
+        <div className="blob-wrapper self-center justify-self-center order-1 md:order-2 md:w-full md:flex md:justify-center">
           <HeroBlob />
         </div>
       </section>
