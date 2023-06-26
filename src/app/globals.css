@@ -6,12 +6,3 @@ html, body {
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
-
-/* Hero */
-.hero-wrapper {
-  background-image: url("/images/hero-bg-4.jpg");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  background-position: center center;
-}
