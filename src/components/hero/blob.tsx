@@ -5,7 +5,7 @@ import Profile from "../../../public/images/profiles.png"
 const HeroBlob = () => {
   return (
       <svg
-        className='relative blob fill-primary w-64 md:w-80 lg:w-96'
+        className='relative blob fill-primary w-64 sm:w-72 md:w-80 lg:w-96'
       viewBox="0 0 200 187"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
