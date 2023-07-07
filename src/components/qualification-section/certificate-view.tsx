@@ -1,5 +1,6 @@
 import React from "react";
 import { WorkComponent } from ".";
+import { CertificateData } from "@/utils/vendor";
 
 const CertificateComponent = ({ active }: { active: boolean }) => {
   return (
@@ -9,11 +10,7 @@ const CertificateComponent = ({ active }: { active: boolean }) => {
         active && "active"
       }`}
     >
-      <WorkComponent
-        org="University of Energy and Natural Resources"
-        role="Bsc. Computer Engineering"
-        date="2017 - 2021"
-      />
+      {CertificateData.map((_, i)=> <WorkComponent key={i} org={_.role} role={_.org} date={_.date} />)}
     </div>
   );
 };
