@@ -1,8 +1,6 @@
 import * as React from "react";
 import Link from "next/link";
-import { BsFront } from "react-icons/bs";
 import { ServiceInterface } from "@/types/interfaces";
-import { IconType } from "react-icons/lib";
 
 const ServiceCard = ({ icon, link, title, description }: ServiceInterface) => {
   const Icon = () => icon({});
@@ -19,8 +17,7 @@ const ServiceCard = ({ icon, link, title, description }: ServiceInterface) => {
           {title.slice(title.indexOf(" "))}
         </h3>
         <p className="service-desc text-primary-text">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
-          doloremque dolorem neque, sed eius delectus.
+          {description}
         </p>
         <Link
           href=""
