@@ -17,7 +17,7 @@ const Stat = ({ title, value }: { title: string; value: string | number }) => (
 
 const AboutSection = () => {
   return (
-    <section id="about-section" className="about-section container py-20">
+    <section id="about" className="about-section container py-20">
       <h2 className="text-3xl text-center text-primary-title font-bold">
         About Me
         <span className="block text-base text-primary-lightText font-normal">
