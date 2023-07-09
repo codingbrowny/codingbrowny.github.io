@@ -1,59 +1,54 @@
-import { AboutSection, ContactForm, Hero, ProjectCard, ServiceCard } from "@/components";
-import { Projects } from "@/utils/vendor";
-import Link from "next/link";
-
+import React from "react";
+import { Services } from "@/utils/vendor";
+import PortfolioSection from "@/components/portfolio-section";
+import { AboutSection, CTASection, ContactForm, Hero, Navbar, ServiceCard } from "@/components";
 
 export default function Home() {
   return (
     <>
+      <Navbar />
+      <main className="h-full">
       <Hero />
-      <main>
-        {/* About Section */}
+        {/* ABOUT SECTION */}
         <AboutSection />
+        {/* SERVICES SECTION */}
         <section
-          id="service-section"
-          className="w-full overflow-hidden py-20 bg-slate-200"
+          id="service"
+          className="w-full overflow-hidden py-20 container space-y-12"
         >
-          <div className="container space-y-12">
-            <h3 className="text-3xl text-center font-semibold">What I Do</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 lg:gap-8 xl:gap-10">
-              <ServiceCard />
-              <ServiceCard />
-              <ServiceCard />
-            </div>
+          <h2 className="text-3xl text-center text-primary-title font-bold">
+            What I Do
+            <span className="block text-base text-primary-lightText font-normal">
+              My services
+            </span>
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 lg:gap-8 xl:gap-10">
+            {Services.map((_, i) => (
+              <ServiceCard
+                key={i}
+                title={_.title}
+                icon={_.icon}
+                description={_.description}
+              />
+            ))}
           </div>
         </section>
-        <section id="projects-section" className="w-full py-20">
-          <div className="container space-y-10">
-            <h3 className="text-3xl text-center font-semibold">My Works</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 lg:gap-8 xl:gap-10">
-              {Projects.map((item, index) => (
-                <ProjectCard key={index} data={item} />
-              ))}
-            </div>
-            <div className="w-full flex items-center justify-center">
-              <Link
-                href=""
-                className="relative w-fit px-10 py-3 z-10 text-white after:absolute after:top-0 after:right-0 after:bottom-0 after:left-0 after:bg-primary after:-z-10 hover:after:scale-95 after:transition-all after:duration-300 after:rounded"
-              >
-                See More
-              </Link>
-            </div>
-          </div>
-        </section>
+        {/* PORTFOLIO SECTION */}
+        <PortfolioSection />
+        {/* CALL TO ACTION */}
+        <CTASection />
         {/* Contact Section */}
         <section
-          id="contact-section"
-          className="bg-slate-800 bg-[url('/images/hero-bg-3.jpg')] bg-no-repeat bg-scroll bg-center bg-cover overflow-hidden"
+          id="contact"
+          className="overflow-hidden py-20 container space-y-12"
         >
-          <div className="w-full h-full bg-black/40 backdrop-blur-[3px] py-20">
-            <div className="container flex flex-col items-center justify-center gap-10">
-              <h3 className="text-3xl text-center font-semibold text-white">
-                Connect With Me
-              </h3>
-              <ContactForm />
-            </div>
-          </div>
+          <h2 className="text-3xl text-center text-primary-title font-bold">
+            Contact Me
+            <span className="block text-base text-primary-lightText font-normal">
+              Let&#39;s get in touch
+            </span>
+          </h2>
+          <ContactForm />
         </section>
       </main>
     </>
