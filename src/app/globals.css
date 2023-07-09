@@ -4,5 +4,46 @@
 
 html, body {
   font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
+
+/* About */
+.about-qualification-wrapper {
+  width: 0px;
+  @apply w-0
+}
+
+.about-qualification-wrapper.active {
+  opacity: 0;
+  animation: growWidth linear 0.3s forwards;
+}
+
+.hero-section {
+  height: calc(100vh - 72px);
+}
+
+@keyframes growWidth {
+  from {
+    width: 0px;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+/* @keyframes growWidth {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
