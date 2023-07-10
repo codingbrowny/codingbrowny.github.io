@@ -1,4 +1,5 @@
 import { Footer } from '@/components'
+import Script from 'next/script'
 import './globals.css'
 
 export const metadata = {
@@ -13,8 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='bg-primary-body'>{children}</body>
-      <Footer/>
+      <body className="bg-primary-body">
+        {children}
+        <Footer />
+      </body>
+      <Script src='/scripts/index.js' />
     </html>
-  )
+  );
 }

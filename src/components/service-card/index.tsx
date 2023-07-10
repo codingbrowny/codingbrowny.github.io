@@ -1,31 +1,27 @@
-import Link from "next/link";
 import * as React from "react";
-import {BsFront} from "react-icons/bs"
+import Link from "next/link";
+import { ServiceInterface } from "@/types/interfaces";
 
-interface ServiceCardInterface {
-  icon: string;
-  link?: string;
-  title?: string;
-  description?: string;
-}
+const ServiceCard = ({ icon, link, title, description }: ServiceInterface) => {
+  const Icon = () => icon({});
 
-const ServiceCard = () => {
   return (
-    <div className="transition-all duration-[400ms] space-y-8 p-8 lg:p-10 w-full overflow-hidden group rounded-lg hover:shadow-app hover:-translate-y-3 hover:shadow-white bg-white hover:bg-primary border border-slate-200">
-      <span className="text-5xl group-hover:text-white">
-        <BsFront />
+    <div className="transition-all duration-[400ms] space-y-8 p-8 lg:p-10 w-full overflow-hidden group rounded-lg hover:shadow-app shadow-primary-body hover:-translate-y-3 border border-primary-input">
+      <span className="text-5xl text-primary transition-colors duration-200">
+        <Icon />
       </span>
       <div className="space-y-4">
-        <h3 className="service-type font-semibold text-xl">
-          Mobile Development
+        <h3 className="service-type font-semibold text-xl text-primary-title">
+          {title.slice(0, title.indexOf(" "))}
+          <br />
+          {title.slice(title.indexOf(" "))}
         </h3>
-        <p className="service-desc">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
-          doloremque dolorem neque, sed eius delectus.
+        <p className="service-desc text-primary-text">
+          {description}
         </p>
         <Link
           href=""
-          className="text-sm block font-medium group-hover:text-white w-fit"
+          className="relative text-sm block font-medium text-primary w-fit after:absolute after:bottom-0 after:left-0 after:h-0.5 after:rounded-lg after:w-0 group-hover:after:w-[120%] after:bg-primary pb-0.5 after:transition-[width] after:duration-300"
         >
           Learn more
         </Link>

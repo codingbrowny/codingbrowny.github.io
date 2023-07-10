@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import Profile from "../../../public/images/profiles.png"
 
 const HeroBlob = () => {
   return (
       <svg
-        className='relative blob fill-primary w-64 md:w-80 lg:w-96'
+        className='relative blob fill-primary w-64 sm:w-72 md:w-80 lg:w-96'
       viewBox="0 0 200 187"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -25,8 +24,7 @@ const HeroBlob = () => {
         129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
         -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
         />
-        {/* @ts-ignore */}
-        <img src="/images/profiles.jpg" alt='Profile' x="12" y="18" />
+        {/* <img src="/images/profiles.jpg" alt='Profile' x="12" y="18" /> */}
       </g>
     </svg>
   );

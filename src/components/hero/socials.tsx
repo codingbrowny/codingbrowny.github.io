@@ -7,13 +7,25 @@ import { IoLogoTwitter } from "react-icons/io";
 const Socials = () => {
   return (
     <div className="socials space-y-5">
-      <Link href={""} className="block text-2xl transition-all duration-300 text-primary-title hover:text-primary">
+      <Link
+        href={"https://www.linkedin.com/in/codingbrowny"}
+        target="_blank"
+        className="block text-2xl transition-all duration-300 text-primary-title hover:text-primary"
+      >
         <BiLogoLinkedin />
       </Link>
-      <Link href={""} className="block text-2xl transition-all duration-300 text-primary-title hover:text-primary">
+      <Link
+        href={"https://www.github.com/codingbrowny"}
+        target="_blank"
+        className="block text-2xl transition-all duration-300 text-primary-title hover:text-primary"
+      >
         <PiGithubLogoFill />
       </Link>
-      <Link href={""} className="block text-2xl transition-all duration-300 text-primary-title hover:text-primary">
+      <Link
+        href={"https://www.twitter.com/codingbrowny"}
+        target="_blank"
+        className="block text-2xl transition-all duration-300 text-primary-title hover:text-primary"
+      >
         <IoLogoTwitter />
       </Link>
     </div>
