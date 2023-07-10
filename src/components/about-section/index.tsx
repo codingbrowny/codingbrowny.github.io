@@ -35,8 +35,8 @@ const AboutSection = () => {
         <div className="about-content w-full md:basis-2/4 space-y-6">
           <p
             className="text-primary-text"
-            aria-description="about codingbrowny"
-            aria-details="about samuel mensah"
+            aria-description="about-codingbrowny"
+            aria-details="about-samuel-mensah"
           >
             I am a dedicated software engineer with a specialty in frontend
             development and over 3 years of professional experience. I love
