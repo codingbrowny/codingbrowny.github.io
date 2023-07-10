@@ -58,12 +58,12 @@ const TabButton = ({ title, icon, onclick, active }: TabButtonInterface) => {
 
 const Qualification = () => {
   const [activeTab, setActiveTab] = React.useState({
-    edu: true,
+    edu: false,
     cert: false,
-    work: false,
+    work: true,
   });
   return (
-    <div className="qualification-wrapper bg-gradient-to-r from-primary-body via-primary-input to-primary-body rounded-lg lg:p-5 lg:space-y-3">
+    <div className="qualification-wrapper bg-gradient-to-r from-primary-body via-primary-input to-primary-body rounded-lg py-3 lg:p-5 lg:space-y-3">
       <div className="btn-wrapper space-x-5 md:space-x-8 lg:space-x-2 lg:grid lg:grid-cols-3">
         <TabButton
           title="Experience"
