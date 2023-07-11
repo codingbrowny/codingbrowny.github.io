@@ -2,7 +2,7 @@ const navHead = document.getElementById("navbar");
 const navList = document.getElementById("nav-list");
 const navToggleBtn = document.getElementById("nav-toggle-btn");
 
-let scrollPosition = window.screenY;
+let scrollPosition = window.scrollY;
 
 function addNavShadow() {
   scrollPosition = window.scrollY;
@@ -15,6 +15,7 @@ function addNavShadow() {
 
 // Navbar Toggle function
 const toggleNavbar = (e) => {
+  navList.classList.toggle("-top-96");
   navList.classList.toggle("top-16");
   navList.classList.toggle("opacity-100")
 };
