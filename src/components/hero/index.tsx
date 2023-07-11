@@ -9,9 +9,9 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative hero-section container py-10 overflow-hidden flex flex-col items-center"
+      className="relative hero-section container pb-10 overflow-hidden flex flex-col items-center"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 my-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 my-auto">
         <div className="md:basi flex items-center gap-8 md:gap-10 lg:gap-14 order-2 md:order-1">
           <Socials />
           <div>
