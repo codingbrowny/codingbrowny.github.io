@@ -24,8 +24,8 @@ module.exports = {
         body: "hsl(250, 60%, 99%)",
       },
       container: {
-        DEFAULT: "#FFF"
-      }
+        DEFAULT: "#FFF",
+      },
     },
     extend: {
       transitionDuration: {
@@ -38,4 +38,3 @@ module.exports = {
   },
   plugins: [],
 };
-
