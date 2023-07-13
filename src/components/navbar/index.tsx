@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import { CgMenuRight } from "react-icons/cg";
@@ -7,6 +8,7 @@ import { PiGithubLogoFill } from "react-icons/pi";
 import { MdOutlineFileDownload } from "react-icons/md";
 
 const Navbar = () => {
+  const [showNavbar, setShowNavbar] = React.useState<boolean>(false);
   return (
     <header
       id="navbar"
@@ -21,13 +23,16 @@ const Navbar = () => {
           id="nav-toggle-btn"
           role="button"
           className="md:hidden rounded-full"
+          onClick={() => setShowNavbar((prev) => !prev)}
         >
           <CgMenuRight className="text-3xl" />
         </button>
 
         <ul
           id="nav-list"
-          className="shadow-md md:shadow-none px-[1rem] sm:px-[2rem] md:px-0 absolute left-0 -top-96 space-y-5 md:space-y-0 py-5 pb-8 md:py-0 md:pb-0 w-full md:w-auto md:static -z-[1] md:z-auto md:flex md:items-center md:gap-8 lg:gap-10 transition-all md:opacity-100 duration-300 bg-container md:bg-[inherit]"
+          className={`shadow-md md:shadow-none px-[1rem] sm:px-[2rem] md:px-0 absolute left-0 space-y-5 md:space-y-0 py-5 pb-8 md:py-0 md:pb-0 w-full md:w-auto md:static -z-[1] md:z-auto md:flex md:items-center md:gap-8 lg:gap-10 transition-all md:opacity-100 duration-300 bg-container md:bg-[inherit] ${
+            showNavbar ? "top-16" : "-top-96"
+          } `}
         >
           <li className="nav-list-item font-medium text-primary-text hover:text-primary">
             <Link href={"#hero"}>Home</Link>
