@@ -64,7 +64,7 @@ const Qualification = () => {
   });
   return (
     <div className="qualification-wrapper bg-gradient-to-r from-primary-body via-primary-input to-primary-body rounded-lg py-3 lg:p-5 lg:space-y-3">
-      <div className="btn-wrapper space-x-5 md:space-x-8 lg:space-x-2 lg:grid lg:grid-cols-3">
+      <div className="btn-wrapper space-x-5 md:space-x-8 lg:space-x-5 lg:grid lg:grid-cols-3">
         <TabButton
           title="Experience"
           icon={CgWorkAlt}
